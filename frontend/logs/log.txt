@@ -1,0 +1,16 @@
+Hash: 57d5d3a2bfd9ac87e897
+Version: webpack 1.12.9
+Time: 90898ms
+            Asset     Size  Chunks             Chunk Names
+    app.bundle.js  7.37 MB       0  [emitted]  app
+    1.1.bundle.js   2.1 MB       1  [emitted]  
+    2.2.bundle.js  2.31 MB       2  [emitted]  
+    3.3.bundle.js   686 kB       3  [emitted]  
+       vendors.js  1.76 MB       4  [emitted]  vendors
+app.bundle.js.map  9.97 MB       0  [emitted]  app
+1.1.bundle.js.map  2.83 MB       1  [emitted]  
+2.2.bundle.js.map  3.11 MB       2  [emitted]  
+3.3.bundle.js.map   924 kB       3  [emitted]  
+   vendors.js.map  2.04 MB       4  [emitted]  vendors
+   [0] multi vendors 184 bytes {4} [built]
+    + 1145 hidden modules

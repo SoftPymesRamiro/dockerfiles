@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    image: softpymes-ubuntu-pymesplus_backend:v1
+    ports:
+      - "5000:5000"
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: PymesDBPSW1
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  frontend:
+    depends_on:
+      - backend
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+volumes:
+  db_data:

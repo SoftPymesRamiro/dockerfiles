@@ -1,0 +1,24 @@
+2017-07-07 21:41:43,234 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'sql_mode'
+2017-07-07 21:41:43,237 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:43,245 INFO sqlalchemy.engine.base.Engine SELECT DATABASE()
+2017-07-07 21:41:43,246 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:43,252 INFO sqlalchemy.engine.base.Engine show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+2017-07-07 21:41:43,253 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:43,265 INFO sqlalchemy.engine.base.Engine SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2017-07-07 21:41:43,266 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:43,269 INFO sqlalchemy.engine.base.Engine SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2017-07-07 21:41:43,270 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:43,273 INFO sqlalchemy.engine.base.Engine SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+2017-07-07 21:41:43,274 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:51,622 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'sql_mode'
+2017-07-07 21:41:51,623 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:51,632 INFO sqlalchemy.engine.base.Engine SELECT DATABASE()
+2017-07-07 21:41:51,632 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:51,639 INFO sqlalchemy.engine.base.Engine show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+2017-07-07 21:41:51,640 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:51,646 INFO sqlalchemy.engine.base.Engine SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2017-07-07 21:41:51,647 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:51,650 INFO sqlalchemy.engine.base.Engine SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2017-07-07 21:41:51,651 INFO sqlalchemy.engine.base.Engine {}
+2017-07-07 21:41:51,656 INFO sqlalchemy.engine.base.Engine SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+2017-07-07 21:41:51,656 INFO sqlalchemy.engine.base.Engine {}
