@@ -17,12 +17,25 @@
 #
 #############################################################################
 
+init:
+	rm -rf PymesPlus_V2/
+	git clone https://github.com/SoftPymesJavier/PymesPlus_V2.git
+	cd PymesPlus_V2
+	git checkout origin develop
+
 build:
 	rm -rf ./backend/PymesPlus_V2/
-	mkdir ./backend/PymesPlus_V2/
-	cp -r ./PymesPlus_V2/pymes-plus-api/ ./backend/PymesPlus_V2/
-	cd ./backend/; \
-	docker build -t softpymes-ubuntu-pymesplus_backend:v1 . 
+	cp -r ./PymesPlus_V2/pymes-plus-api/ ./backend/pymes-plus-api/
+
+	rm -rf ./frontend/PymesPlus_V2/
+	mkdir ./frontend/PymesPlus_V2/
+	cp -r ./PymesPlus_V2/ ./frontend/PymesPlus_V2/
+	rm -rf ./backend/PymesPlus_V2/pymes-plus-api/
+
+	docker-compose build
+
+	rm -rf backend/PymesPlus_V2/
+	rm -rf frontend/PymesPlus_V2/
 
 run:
-	docker run -p 5000:5000 -v /Users/produccion2/workspace/docker/backend/logs/:/root/logs/ -d softpymes-ubuntu-pymesplus_backend:v1
+	docker-compose up

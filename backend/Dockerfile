@@ -8,18 +8,17 @@ RUN apt-get update && apt install -y \
 	build-essential \
 	git git-core \
 	locales \
-	&& mkdir ~/app/ && mkdir ~/logs/ && mkdir ~/.fonts
+	&& mkdir ~/logs/ && mkdir ~/.fonts
 ENV LANG C.UTF-8
+
+WORKDIR /root/app/
+
 RUN pip3 install --upgrade pip
-ADD PymesPlus_V2/pymes-plus-api/requirements.txt /root/app/requirements.txt
-RUN pip3 install -r ~/app/requirements.txt
-ADD run.sh /root/app/
-ADD .env /root/app/
-ADD PymesPlus_V2/pymes-plus-api/ /root/app/
-RUN cp ~/app/fonts/* ~/.fonts/ && chmod +x ~/app/run.sh
+ADD pymes-plus-api/requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+ADD . .
+RUN cp -R pymes-plus-api/fonts/* ~/.fonts/ 
 
 EXPOSE 5000
-
-ENTRYPOINT  ["/root/app/run.sh"]  
-
-CMD ["bash"]
+CMD [ "python3", "/root/app/pymes-plus-api/pymes-plus/run.py" ]

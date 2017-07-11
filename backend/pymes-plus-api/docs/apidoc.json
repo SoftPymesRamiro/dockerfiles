@@ -1,0 +1,13 @@
+{
+  "name": "PymesPlus V2",
+  "version": "0.1.0",
+  "description": "API reference by PymesPlus V2",
+  "title": "Pymes Plus v2",
+  "url" : "http://pymesplusv2:5000",
+  "sampleUrl": "http://pymesplusv2:5000",
+  "template": {
+  	"withCompare": true,
+  	"withGenerator": true,
+    "forceLanguage": "en"
+  }
+}
