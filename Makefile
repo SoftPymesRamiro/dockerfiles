@@ -34,7 +34,7 @@ build:
 
 	docker-compose build
 
-	rm -rf backend/PymesPlus_V2/
+	rm -rf backend/pymes-plus-api/
 	rm -rf frontend/PymesPlus_V2/
 
 run:
