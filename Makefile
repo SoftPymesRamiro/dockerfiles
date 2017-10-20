@@ -20,8 +20,8 @@
 init:
 	rm -rf PymesPlus_V2/
 	git clone https://github.com/SoftPymesJavier/PymesPlus_V2.git
-	cd PymesPlus_V2
-	git checkout origin develop
+	cd ./PymesPlus_V2/
+	git checkout develop
 
 build:
 	rm -rf ./backend/PymesPlus_V2/
